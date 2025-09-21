@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TipJar digital donation jar</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1 class="title">✨ TipJar-Digital Donation Jar ✨</h1>
+    <button id="connectBtn" onclick="connectWallet()">Connect Wallet</button>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Tip Box -->
+    <div class="card">
+      <h2>💸 Send a Tip</h2>
+      <input id="tipAmount" type="number" placeholder="Enter tip (SHM)" />
+      <button onclick="sendTip()">Send Tip</button>
+    </div>
+
+    <!-- Balance Box -->
+    <div class="card">
+      <h2>📊 Your Balance</h2>
+      <p id="status">Balance: 0 SHM</p>
+      <button onclick="withdraw()">Withdraw</button>
+    </div>
+
+    <!-- History Box -->
+    <div class="card history">
+      <h2>📜 Tip History</h2>
+      <div id="tipHistory"></div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

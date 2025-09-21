@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaMask Test</title>
+</head>
+<body>
+  <h1>MetaMask Connection Test</h1>
+  <button id="connectBtn">Connect Wallet</button>
+  <p id="walletAddress">Wallet not connected</p>
+
+  <script>
+    const connectBtn = document.getElementById("connectBtn");
+    const walletAddress = document.getElementById("walletAddress");
+
+    connectBtn.onclick = async () => {
+      if (window.ethereum) {
+        try {
+          const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+          const account = accounts[0];
+          walletAddress.innerText = `Connected account: ${account}`;
+          connectBtn.innerText = "Wallet Connected";
+          console.log("Connected account:", account);
+        } catch (err) {
+          console.error("Connection error:", err);
+          alert("Connection rejected! Check MetaMask and network.");
+        }
+      } else {
+        alert("MetaMask not found. Install it first!");
+      }
+    };
+  </script>
+</body>
+</html>
