@@ -1,0 +1,27 @@
+TipJar – A Decentralized Digital Donation Jar
+---------------------------------------------
+
+TipJar is a decentralized application (dApp) built on the Shardeum blockchain. 
+It allows users to send and receive instant, low-fee micro-donations. Simple, 
+scalable, and borderless – small tips, big impact.
+
+Features:
+- Instant micro-donations
+- Low transaction fees
+- Connects with MetaMask or other Web3 wallets
+- Fully decentralized and secure
+
+Technologies Used:
+- Shardeum blockchain
+- Solidity smart contracts
+- React.js, HTML, CSS, JavaScript
+- MetaMask wallet integration
+
+Usage:
+1. Clone the repository
+2. Install dependencies
+3. Connect your MetaMask wallet
+4. Send or receive micro-donations instantly
+
+License:
+MIT License
